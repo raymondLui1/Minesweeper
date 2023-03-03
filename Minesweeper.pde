@@ -112,7 +112,7 @@ public class MSButton
     public void mousePressed() 
     {
       if(mouseButton == CENTER)
-          return; 
+          //return; 
       if(mouseButton == LEFT){
           clicked = true;
           shown = true;
