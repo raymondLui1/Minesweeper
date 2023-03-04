@@ -68,6 +68,7 @@ public void displayWinningMessage()
     for(int i = 0; i < NUM_ROWS; i++)
       for(int j = 0; j < NUM_COLS; j++)
         buttons[i][j].setLabel(":)");
+    noLoop();
 }
 public boolean isValid(int r, int c)
 {
