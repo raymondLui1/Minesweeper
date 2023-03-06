@@ -60,7 +60,7 @@ public void displayLosingMessage()
           buttons[i][j].mousePressed();
           }
         }
-    noLoop();
+    //noLoop();
 }
 public void displayWinningMessage()
 {
