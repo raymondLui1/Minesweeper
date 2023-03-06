@@ -60,7 +60,7 @@ public void displayLosingMessage()
       for(int j = 0; j < NUM_COLS; j++)
         if(mines.contains(buttons[i][j]) && buttons[i][j].clicked == false)
           buttons[i][j].mousePressed();
-    noLoop();
+    //noLoop();
 }
 public void displayWinningMessage()
 {
