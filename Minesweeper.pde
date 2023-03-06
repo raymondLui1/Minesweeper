@@ -143,7 +143,7 @@ public class MSButton
           for(int i = myRow-1; i <= myRow+1; i++)
             for(int j = myCol-1; j <= myCol+1; j++)
               if(isValid(i, j))
-                if(!(mines.contains(buttons[i][j])) && buttons[i][j].clicked == false)
+                if(!(mines.contains(buttons[i][j])) && buttons[i][j].clicked == false && buttons[i][j].flagged == false)
                   buttons[i][j].mousePressed(); 
                 }
         //your code here
