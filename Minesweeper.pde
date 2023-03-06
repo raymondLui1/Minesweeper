@@ -53,7 +53,14 @@ public boolean isWon()
 public void displayLosingMessage()
 {
     //your code here
-    buttons[0][0].setLabel("AAAAAAAAAAA");
+    for(int i = 0; i < NUM_ROWS; i++)
+      for(int j = 0; j < NUM_COLS; j++)
+        buttons[i][j].setLabel(":(");
+    for(int i = 0; i < NUM_ROWS; i++)
+      for(int j = 0; j < NUM_COLS; j++)
+        if(mines.contains(buttons[i][j]) && buttons[i][j].clicked == false)
+          buttons[i][j].mousePressed();
+    noLoop();
 }
 public void displayWinningMessage()
 {
