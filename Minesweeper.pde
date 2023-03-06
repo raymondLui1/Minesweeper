@@ -37,6 +37,8 @@ public void draw ()
     background( 0 );
     if(isWon() == true)
         displayWinningMessage();
+    if(isLost() == true)
+        displayLosingMessage();
 }
 public boolean isWon()
 {
