@@ -50,6 +50,15 @@ public boolean isWon()
       return true;
     return false;
 }
+public boolean isLost()
+{
+    //your code here
+    for(int i = 0; i < NUM_ROWS; i++)
+      for(int j = 0; j < NUM_COLS; j++)
+        if(buttons[i][j].clicked == true && mines.contains(buttons[i][j]) == true)
+          return true;
+    return false;
+}
 public void displayLosingMessage()
 {
     //your code here
@@ -60,8 +69,7 @@ public void displayLosingMessage()
           buttons[i][j].mousePressed();
           }
         }
-    //noLoop();
-    //noLoop();
+    noLoop();
 }
 public void displayWinningMessage()
 {
@@ -125,8 +133,8 @@ public class MSButton
             clicked = false;
         }
         else if(flagged == true);
-        else if(mines.contains( this ))
-          displayLosingMessage();
+        else if(mines.contains( this ));
+          //displayLosingMessage();
         else if(countMines(myRow, myCol) > 0 && flagged == false)
           setLabel(countMines(myRow, myCol));
         else{  
